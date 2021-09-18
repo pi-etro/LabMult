@@ -5,9 +5,9 @@ Aqui você encontrará todos os relatórios e materiais desenvolvidos nos labora
 
 ## Grupo
 
-| Nome                    | RA        |
-|-------------------------|-----------|
-|Fernando Gabriel Chacon  |11201811700|
-|Gabriel Ikenaga          |11201720140|
-|Pietro Gregorio          |11038416   |
-|Alice                    |12345678   |
+| Nome                                 | RA        |
+|--------------------------------------|-----------|
+|Fernando Gabriel Chacon               |11201811700|
+|Gabriel Ikenaga                       |11201720140|
+|Pietro Gregorio                       |11038416   |
+|Fabian Pietro de França Bram Sardagna |11201722648|
