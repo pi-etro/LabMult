@@ -15,25 +15,20 @@ body {
     padding: 20px 25px 20px 25px;
 }
 
-#menu {
-    display: flex;
-    /* height: 80px; */
-    min-height: 25px;
-    overflow: hidden;
-    padding: 15px 0px 15px;
-    margin-bottom: 30px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(223, 233, 233, 1);
-    border-radius: 20px;
-}
-
-.menu-logo{
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
 @media all and (max-width: 540px) {
+    #menu {
+        display: flex;
+        /* height: 80px; */
+        min-height: 25px;
+        overflow: hidden;
+        padding: 15px 0px 0px;
+        margin-bottom: 30px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(223, 233, 233, 1);
+        border-radius: 20px;
+    }
+
     .menu-options a {
         margin-right: 30px;
         margin-bottom: 15px;
@@ -45,13 +40,30 @@ body {
 }
 
 @media all and (min-width: 541px) {
+    #menu {
+        display: flex;
+        /* height: 80px; */
+        min-height: 25px;
+        overflow: hidden;
+        padding: 15px 0px 15px;
+        margin-bottom: 30px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(223, 233, 233, 1);
+        border-radius: 20px;
+    }
+
     .menu-options a {
         margin-right: 30px;
-        margin-bottom: 30px;
         font-weight: bolder;
         font-size: 15pt;
         color: #808080;
     }
+}
+
+.menu-logo{
+    margin-left: 30px;
+    margin-right: 25px;
 }
 
 #option-home:hover{
