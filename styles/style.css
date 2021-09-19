@@ -22,74 +22,69 @@ body {
     margin-bottom: 30px;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(223, 233, 233, 0.8);
+    background-color: rgba(223, 233, 233, 1);
     border-radius: 20px;
 }
 
-.menulogo{
+.menu-logo{
     margin-left: 30px;
 }
 
-.menuopt a {
+.menu-options a {
     margin-right: 30px;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 15pt;
     color: #808080;
 }
 
-#home:hover{
+#option-home:hover{
     color: #00ca4e;
 }
 
-#relat:hover{
+#option-relat:hover{
     color: #ff605c;
 }
 
-#grupo:hover{
+#option-grupo:hover{
     color: #ffbd44;
 }
 
-.postverde {
+.green-card {
     align-items: top;
     /* display: flex; */
     min-height: 25px;
     overflow: hidden;
-    padding: 20px 30px 20px 30px;
+    padding: 20px 30px 5px 30px;
     background-color: rgba(0,202,75,0.4);
     border-radius: 20px;
     margin-bottom: 30px;
 }
 
-.postvermelho {
+.red-card {
     align-items: top;
     /* display: flex; */
     min-height: 25px;
     overflow: hidden;
-    padding: 20px 30px 20px 30px;
-    background-color: rgba(255,96,92,0.6);
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(255,96,92,0.5);
     border-radius: 20px;
     margin-bottom: 30px;
 }
 
-.postamarelo {
+.yellow-card {
     align-items: top;
     /* display: flex; */
     min-height: 25px;
     overflow: hidden;
-    padding: 20px 30px 20px 30px;
-    background-color: rgba(255, 189, 68, 0.7);
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(255, 189, 68, 0.6);
     border-radius: 20px;
     margin-bottom: 30px;
-}
-
-.texto {
-    text-align: justify;
-    display:block
 }
 
 .card-header {
     display: flex;
-    height: 100px;
+    height: 130px;
     align-items: center;
 }
 
@@ -98,8 +93,33 @@ body {
     height: 100%;
 }
 
+.card-header div .subtitle{
+    margin-bottom: 0;
+}
+
 .avatar {
     height: 100px;
     width: 100px;
     margin-right: 20px;
+}
+
+.title {
+    text-align: justify;
+    display:block;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    text-align: justify;
+    display:block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text {
+    text-align: justify;
+    display:block;
+    margin-bottom: 20px
 }
