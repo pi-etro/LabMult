@@ -1,0 +1,105 @@
+/* #00ca4e verde*/
+/* #ff605c vermelho*/
+/* #ffbd44 amarelo*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    padding: 20px 25px 20px 25px;
+}
+
+#menu {
+    display: flex;
+    height: 80px;
+    padding: 15px 0px 15px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(223, 233, 233, 0.8);
+    border-radius: 20px;
+}
+
+.menulogo{
+    margin-left: 30px;
+}
+
+.menuopt a {
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 15pt;
+    color: #808080;
+}
+
+#home:hover{
+    color: #00ca4e;
+}
+
+#relat:hover{
+    color: #ff605c;
+}
+
+#grupo:hover{
+    color: #ffbd44;
+}
+
+.postverde {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 20px 30px;
+    background-color: rgba(0,202,75,0.4);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.postvermelho {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 20px 30px;
+    background-color: rgba(255,96,92,0.6);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.postamarelo {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 20px 30px;
+    background-color: rgba(255, 189, 68, 0.7);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.texto {
+    text-align: justify;
+    display:block
+}
+
+.card-header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+
+.card-header div img {
+    border-radius: 50%;
+    height: 100%;
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
