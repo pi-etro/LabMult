@@ -111,6 +111,54 @@ body {
     margin-bottom: 30px;
 }
 
+.green-card-link {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(0,202,75,0.4);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.red-card-link {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(255,96,92,0.5);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.yellow-card-link {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(255,189,68,0.6);
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.green-card-link:hover {
+    transform: scale(1.01);
+    background-color: rgba(0,202,75,0.7);
+}
+
+.red-card-link:hover {
+    transform: scale(1.01);
+    background-color: rgba(255,96,92,0.8);
+}
+
+.yellow-card-link:hover {
+    transform: scale(1.01);
+    background-color: rgba(255,189,68,0.8);
+}
+
 .card-header {
     display: flex;
     min-height: 130px;
