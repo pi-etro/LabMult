@@ -1,0 +1,50 @@
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.green-card-aboutme {
+    align-items: top;
+    /* display: flex; */
+    min-height: 50px;
+    overflow: hidden;
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(0,202,75,0.4);
+    border-radius: 10px;
+    margin-bottom: 1px;
+    font-size: 1.2rem;
+}
+
+.green-card {
+    align-items: top;
+    /* display: flex; */
+    min-height: 25px;
+    overflow: hidden;
+    padding: 20px 30px 5px 30px;
+    background-color: rgba(0,202,75,0.7);
+    border-radius: 10px;
+    margin-bottom: 1px;
+}
+
+
+footer {
+    min-height: 20px;
+    text-align: center;
+    background-color: gray;
+    font-family: "Roboto", sans-serif;
+    padding: 20px 30px 5px 30px;
+    border-radius: 10px;
+    margin-top: auto;
+    
+}
+
+.audio {
+    text-align: center;
+}
+
+.video {
+    text-align: center;
+}
+  
+  
