@@ -1,9 +1,5 @@
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
 .green-card-aboutme {
     align-items: top;
     /* display: flex; */
@@ -13,7 +9,7 @@ body {
     background-color: rgba(0,202,75,0.4);
     border-radius: 10px;
     margin-bottom: 1px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .green-card {
@@ -46,5 +42,40 @@ footer {
 .video {
     text-align: center;
 }
+
+.video_embed{
+    text-align: center;
+    
+}
+
+.video_embed iframe {
+    width:560px;
+    height: 315px;
+}
+
+@media all and (max-width: 700px) {
+    video{
+        width: 100%;
+        height: auto;
+    }
+
+    audio{
+        width: 70%;
+    }
+
+    .video_embed iframe{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media all and (min-width: 451px){
+    video{
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+}
+
   
   
