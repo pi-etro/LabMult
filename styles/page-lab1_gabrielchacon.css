@@ -53,6 +53,37 @@ footer {
     height: 315px;
 }
 
+.aboutme-image{
+    text-align: center;
+}
+
+.aboutme-image img{
+    width: 70%;
+    height: auto;
+    margin-bottom: 4px;
+}
+.aboutme-object object{
+    max-width:600px;
+}
+
+.aboutme-object{
+    text-align:center;
+}
+
+.audio-desc{
+    display:flex; 
+    justify-content: flex-end ;
+    align-items: center
+}
+
+.audio-desc audio{
+    max-width: 250px;
+} 
+
+h2{
+    text-align:center;
+    margin-bottom: 4px;
+}
 @media all and (max-width: 700px) {
     video{
         width: 100%;
@@ -67,6 +98,11 @@ footer {
         width: 100%;
         height: auto;
     }
+
+    .aboutme-image img{
+        width: 70%;
+        height: auto;
+    }
 }
 
 @media all and (min-width: 451px){
@@ -74,6 +110,12 @@ footer {
         max-width: 300px;
         width: 100%;
         height: auto;
+    }
+
+    .aboutme-image img{
+        width: 70%;
+        height: auto;
+        max-width:400px;
     }
 }
 
