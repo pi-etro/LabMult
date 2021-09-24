@@ -12,6 +12,10 @@
     font-size: 1.4rem;
 }
 
+.green-card-aboutme span{
+    text-align: justify;
+}
+
 .green-card {
     align-items: top;
     /* display: flex; */
