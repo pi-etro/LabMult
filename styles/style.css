@@ -41,6 +41,7 @@ body {
     }
 }
 
+
 @media all and (min-width: 541px) {
     #menu {
         display: flex;
@@ -203,3 +204,50 @@ body {
     display:block;
     margin-bottom: 20px
 }
+
+.collapsible {
+    background-color: rgba(0,202,75,0.4);
+    color: black;
+    cursor: pointer;
+    /*overflow: hidden;
+    align-items: top;
+    */
+    padding: 12px 30px 12px 30px;
+    border-radius: 10px;
+    margin-bottom: 1px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.3rem;
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    color: gray;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .active, .collapsible:hover {
+    background-color: rgba(0,202,75,0.8);;
+  }
+
+  .content {
+    align-items: top;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    padding: 0px 30px;
+    background-color: rgba(0,202,75,0.4);
+    border-radius: 10px;
+    margin-bottom: 1px;
+    font-size: 1.2rem;
+    
+
+  }
