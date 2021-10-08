@@ -251,3 +251,13 @@ body {
     
 
   }
+
+  .content img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 4px;
+  }
+
+  .content p{
+    text-align: justify;
+  }
