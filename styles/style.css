@@ -252,12 +252,13 @@ body {
 
   }
 
-  /*.content img {
-    width: 70%;
+  .content img {
+    width: 75%;
     height: auto;
+    max-width: 600px;
     margin-bottom: 4px;
   }
-*/
+
   .content p{
     text-align: justify;
   }
