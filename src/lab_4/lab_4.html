@@ -28,5 +28,689 @@
             <a id="option-grupo" href="../grupo/grupo.html" style="text-decoration:none">Grupo</a>
         </div>
     </nav>
+
+    <div class="green-card">
+        <div class="card-header">
+            <div>
+                <span class="title">Laboratório 4</span>
+                <span class="subtitle">Codificação de Imagem com DWT</span>
+                <span class="text">Os códigos em Python utilizados neste laboratório podem ser vistos no Jupyter
+                    Notebook no link:
+                    <br><br>
+                    <a
+                        href="https://colab.research.google.com/drive/14iES2gM2ORnc1mMCsQCFupoO8XmInGoZ">https://colab.research.google.com/drive/14iES2gM2ORnc1mMCsQCFupoO8XmInGoZ</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Codificação e Decodificação por DWT e IDWT</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir apresentamos as imagens geradas para a foto do grupo com a utilização do DWT. Abaixo de cada figura
+            está descrito o nível e a componente de cada imagem gerada.
+        </p>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/grupo.bmp" style="text-align: center;" alt="" height="300px">
+                <figcaption>1. Grupo original</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/grupo_DWT_N1_Cb.bmp" style="text-align: center;" alt="" height="300px">
+                <figcaption>2. Grupo DWT N1 Cb</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/grupo_DWT_N1_Cr.bmp" style="text-align: center;" alt="" height="300px">
+                <figcaption>3. Grupo DWT N1 Cr</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/grupo_DWT_N1_Y.bmp" style="text-align: center;" alt="" height="300px">
+                <figcaption>4. Grupo DWT N1 Y</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/grupo_DWT_N2_Y.bmp" style="text-align: center;" alt="" height="300px">
+                <figcaption>5. Grupo DWT N2 Y</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/grupo_DWT_N1_colorida.bmp" style="text-align: center;" alt="" height="300px">
+                <figcaption>6. Grupo DWT N1 colorida</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Taxa de Compressão</button>
+
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir apresentamos uma comparação entre o tamanho, em bytes, das imagens geradas, bem como a taxa de
+            compressão com relação a cada imagem original e a PSNR (elação sinal-ruído de pico) das imagens coloridas.
+        </p>
+
+        <div style="text-align: center;">
+            <table style="border-collapse:collapse;border-spacing:0;margin-left: auto;margin-right: auto;" class="tg">
+                <thead>
+                    <tr>
+                        <th
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            Nome</th>
+                        <th
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            Tamanho (Bytes)</th>
+                        <th
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            Taxa de compressão (%)</th>
+                        <th
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:bold;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            PSNR TOTAL (db)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            peppers Original</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            287589</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            100</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            peppers Aprox. DWT_N1_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            50230</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            17.47</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            peppers Aprox. DWT_N2_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            13366</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            4.65</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            peppers DWT_N1_colorida</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            147510</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            51.29</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            170</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Grupo Original</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            23040054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            100</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Grupo Aprox. DWT_N1_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1921078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.34</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Grupo Aprox. DWT_N2_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            481078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            02.09</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Grupo Aprox. DWT_N1_Cb</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1921078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.34</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Grupo Aprox. DWT_N1_Cr</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1921078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.34</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Grupo DWT_N1_colorida</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            5760054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            25.00</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            276</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Gabriel Original</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            5760054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            100</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Gabriel Aprox. DWT_N1_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            481078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.35</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Gabriel Aprox. DWT_N2_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            121078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            2.10</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Gabriel DWT_N1_colorida</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1440054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            25.00</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            279</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fernando Original</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            5760054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            100</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fernando Aprox. DWT_N1_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            481078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.35</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fernando Aprox. DWT_N2_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            121078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            2.10</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fernando DWT_N1_colorida</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1440054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            25.00</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            279</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Pietro Original</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            5760054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            100</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Pietro Aprox. DWT_N1_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            481078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.35</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Pietro Aprox. DWT_N2_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            121078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            2.10</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Pietro DWT_N1_colorida</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1440054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            25.00</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            279</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fábian Original</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            5760054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            100</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fábian Aprox. DWT_N1_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            481078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            8.35</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fábian Aprox. DWT_N2_Y</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            121078</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            2.10</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
+                            Fábian DWT_N1_colorida</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:top;word-break:normal">
+                            1440054</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:right;vertical-align:bottom;word-break:normal">
+                            25.00</td>
+                        <td
+                            style="border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:center;vertical-align:top;word-break:normal">
+                            280</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Imagens individuais</button>
+
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            Nesta seção apresentamos as imagens geradas na primeira etapa do laboratório para cada integrante do grupo.
+        </p>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fabian.jpg" style="text-align: center;" alt="" height="300px">
+                    <figcaption>7. Fabian</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fabian_DWT_N1_colorida.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>8. Fabian DWT N1 colorida</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fabian_DWT_N1_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>9. Fabian DWT N1 Y</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fabian_DWT_N2_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>10. Fabian DWT N2 Y</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fernando.jpg" style="text-align: center;" alt="" height="300px">
+                    <figcaption>11. Fernando</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fernando_DWT_N1_colorida.bmp" style="text-align: center;" alt=""
+                        height="300px">
+                    <figcaption>12. Fernando DWT N1 colorida</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fernando_DWT_N1_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>13. Fernando DWT N1 Y</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/fernando_DWT_N2_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>14. Fernando DWT N2 Y</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/gabriel.jpg" style="text-align: center;" alt="" height="300px">
+                    <figcaption>15. Gabriel</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/gabriel_DWT_N1_colorida.bmp" style="text-align: center;" alt=""
+                        height="300px">
+                    <figcaption>16. Gabriel DWT N1 colorida</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/gabriel_DWT_N1_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>17. Gabriel DWT N1 Y</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/gabriel_DWT_N2_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>18. Gabriel DWT N2 Y</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/pietro.jpg" style="text-align: center;" alt="" height="300px">
+                    <figcaption>19. Pietro</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/pietro_DWT_N1_colorida.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>20. Pietro DWT N1 colorida</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/pietro_DWT_N1_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>21. Pietro DWT N1 Y</figcaption>
+                </figure>
+            </div>
+
+            <br>
+
+            <div style="text-align: center; font-size: 12pt;">
+                <figure style="text-align: center;">
+                    <img src="./resources/pietro_DWT_N2_Y.bmp" style="text-align: center;" alt="" height="300px">
+                    <figcaption>22. Pietro DWT N2 Y</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
