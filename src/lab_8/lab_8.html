@@ -28,5 +28,482 @@
             <a id="option-grupo" href="../grupo/grupo.html" style="text-decoration:none">Grupo</a>
         </div>
     </nav>
+
+    <div class="green-card">
+        <div class="card-header">
+            <div>
+                <span class="title">Laboratório 8</span>
+                <span class="subtitle">Codificação de Áudio com ffmpeg</span>
+                <span class="text">Os códigos em Python utilizados neste laboratório podem ser vistos no Jupyter
+                    Notebook no link:
+                    <br><br>
+                    <a
+                        href="https://colab.research.google.com/drive/1Eu09kKPbwD1mGjgtblDrd3UU-GQcoa3q">https://colab.research.google.com/drive/1Eu09kKPbwD1mGjgtblDrd3UU-GQcoa3q</a>
+                </span>
+            </div>
+        </div>
+
+        <br>
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/intro.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <br>
+    </div>
+
+    <button type="button" class="collapsible">Arquivos de áudio - Áudio original</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentado o arquivo de áudio de exemplo.
+        </p>
+
+        <br>
+        <h3>Arquivo .wav full</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/ABBA_Fernando.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/ABBA_Fernando.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma do arquivo original</figcaption>
+            </figure>
+        </div>
+
+        <br>
+        <h3>Conversão wav em mp3, 128kbps</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/abba128k.mp3" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/abba128k.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma do arquivo codificado - 128Kbps</figcaption>
+            </figure>
+        </div>
+
+        <br>
+        <h3>Conversão wav em mp3, 64kbps</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/abba64k.mp3" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/abba64k.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma do arquivo codificado - 64Kbps</figcaption>
+            </figure>
+        </div>
+        <br>
+        <h3>Conversão wav em mp3, 32kbps</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/abba32k.mp3" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/abba32k.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma do arquivo codificado - 32Kbps</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <h3>Conversão wav em mp3, 16kbps</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/abba16k.mp3" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/abba16k.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma do arquivo codificado - 16Kbps</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <h3>Conversão wav em mp3, 8kbps</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/abba8k.mp3" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/abba8k.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma do arquivo codificado - 8Kbps</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Estrofe selecionada</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir os trechos do áudio com a estrofe selecionada é exibido.
+        </p>
+
+        <br>
+        <h3>Fernando</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/Fernando_Estrofe.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Estrofe.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Primeira estrofe - Fernando</figcaption>
+            </figure>
+        </div>
+
+        <br>
+        <h3>Gabriel</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/Gabriel_Estrofe.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Estrofe.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Primeira estrofe - Gabriel</figcaption>
+            </figure>
+        </div>
+
+        <br>
+        <h3>Pietro</h3><br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/Pietro_Estrofe.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Estrofe.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Primeira estrofe - Pietro</figcaption>
+            </figure>
+        </div>
+
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Cálculo dos Parâmetros LPC, separação U/UV e Espectro + Envoltória
+        LPC</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir são apresentados os parâmetros do modelo LPC, a seperação dos segmentos sonoros e surdos e também o
+            espectrograma e a envoltória LPC para cada integrante.
+        </p>
+
+        <h3>Fernando</h3><br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <b>Limiar VAD:</b> 42.129540161467006<br>
+            <b>Limiar U/UV:</b> 44.82954016146701<br>
+            <b>Segmentos Sonoros:</b> 11<br>
+            <b>Segmentos Surdos:</b> 9<br>
+            <br>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Energia.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Energia da Voz da primeira estrofe</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Sonoros.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Segmentos Sonoros</figcaption>
+            </figure>
+        </div>
+        <br>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Surdos.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Segmentos Surdos</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_F0.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Trajetória da F0 usando o algoritmo de pYIN</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Pitch.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Trajetória do pitch</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Espectrograma.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma e estimação da frequência fundamental por pYIN</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Fernando_Espectrograma_Estrofe.png" style="text-align: center;" alt=""
+                    height="300px">
+                <figcaption>Espectrograma e estimação da frequência fundamental por pYIN da primeira estrofe
+                </figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <h3>Gabriel</h3><br>
+        <div style="text-align: center; font-size: 12pt;">
+            <b>Limiar VAD:</b> 15.541604850782285<br>
+            <b>Limiar U/UV:</b> 18.241604850782284<br>
+            <b>Segmentos Sonoros:</b> 10<br>
+            <b>Segmentos Surdos:</b> 6<br>
+            <br>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Energia.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Energia da Voz da primeira estrofe</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Sonoros.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Segmentos Sonoros</figcaption>
+            </figure>
+        </div>
+        <br>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Surdos.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Segmentos Surdos</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_F0.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Trajetória da F0 usando o algoritmo de pYIN</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Pitch.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Trajetória do pitch</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Espectrograma.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma e estimação da frequência fundamental por pYIN</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Gabriel_Espectrograma_Estrofe.png" style="text-align: center;" alt=""
+                    height="300px">
+                <figcaption>Espectrograma e estimação da frequência fundamental por pYIN da primeira estrofe
+                </figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <h3>Pietro</h3><br>
+        <div style="text-align: center; font-size: 12pt;">
+            <b>Limiar VAD:</b> 82.15248274080325<br>
+            <b>Limiar U/UV:</b> 84.85248274080325<br>
+            <b>Segmentos Sonoros:</b> 24<br>
+            <b>Segmentos Surdos:</b> 3<br>
+            <br>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Energia.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Energia da Voz da primeira estrofe</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Sonoros.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Segmentos Sonoros</figcaption>
+            </figure>
+        </div>
+        <br>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Surdos.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Segmentos Surdos</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_F0.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Trajetória da F0 usando o algoritmo de pYIN</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Pitch.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Trajetória do pitch</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Espectrograma.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Espectrograma e estimação da frequência fundamental por pYIN</figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/Pietro_Espectrograma_Estrofe.png" style="text-align: center;" alt=""
+                    height="300px">
+                <figcaption>Espectrograma e estimação da frequência fundamental por pYIN da primeira estrofe
+                </figcaption>
+            </figure>
+        </div>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+
+    <button type="button" class="collapsible">Conclusões</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            Colocar conclusão<br>
+        </p>
+
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
