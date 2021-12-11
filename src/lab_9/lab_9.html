@@ -28,5 +28,586 @@
             <a id="option-grupo" href="../grupo/grupo.html" style="text-decoration:none">Grupo</a>
         </div>
     </nav>
+    <div class="green-card">
+        <div class="card-header">
+            <div>
+                <span class="title">Laboratório 9</span>
+                <span class="subtitle">MIDI e IR</span>
+                <span class="text">Os códigos em Python utilizados neste laboratório podem ser vistos no Jupyter
+                    Notebook no link:
+                    <br><br>
+                    <a
+                        href="https://colab.research.google.com/drive/10m3o43rcTlUa0yunEB4AsnM1jQhDKsfA">https://colab.research.google.com/drive/10m3o43rcTlUa0yunEB4AsnM1jQhDKsfA</a>
+                </span>
+            </div>
+        </div>
+
+        <br>
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/intro.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <br>
+    </div>
+
+    <button type="button" class="collapsible">Música criada pelo grupo</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentada a música de maior duração criada pelo grupo tocada em três ambientes distintos.
+        </p>
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música escolhida pelo grupo</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/musica_grupo.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/musica_grupo.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Plot MIDI - Música grupo</figcaption>
+            </figure>
+        </div>
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Ambiente 1 - Escadas da Universidade of York </p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/IR_stairs.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>IR das escadas da Universidade de York</figcaption>
+            </figure>
+        </div>
+        <br>
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ambiente 1</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/musica_grupo_stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Ambiente 2 - Ginásio da Universidade of York </p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/IR_sports.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>IR do ginásio da Universidade de York</figcaption>
+            </figure>
+        </div>
+        <br>
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ambiente 2</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/musica_grupo_sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Ambiente 3 - Auditório da Universidade of York </p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/IR_hall.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>IR do auditório da Universidade de York</figcaption>
+            </figure>
+        </div>
+        <br>
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ambiente 3</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/musica_grupo_hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">.MIDI escolhido pelo grupo</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentada a música stairway to heaven do grupo led zeppelin, tocada em três ambientes distintos (os mesmos ambientes nos quais a primeira música foi tocada).
+        </p>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">stairway to heaven</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/stairway_to_heaven.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/stairway_to_heaven.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Plot MIDI - stairway to heaven</figcaption>
+            </figure>
+        </div>
+        <br>
+        <br>
+
+
+        
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada nas escadas da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/stairway_to_heaven_stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ginásio da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/stairway_to_heaven_sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no auditório da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/stairway_to_heaven_hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Música criada pelo Fábian</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentada a música criada pelo integrante Fábian
+        </p>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música criada pelo Fábian</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fabian.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/fabian.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Plot MIDI - Música criada pelo Fábian.</figcaption>
+            </figure>
+        </div>
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada nas escadas da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fabian_stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ginásio da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fabian_sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no auditório da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fabian_hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Música criada pelo Fernando</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentada a música criada pelo integrante Fernando.
+        </p>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música criada pelo Fernando</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fernando.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/fernando.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Plot MIDI - Música criada pelo Fernando</figcaption>
+            </figure>
+        </div>
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada nas escadas da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fernando_stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ginásio da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fernando_sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no auditório da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/fernando_hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Música criada pelo Gabriel</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentada a música criada pelo integrante Gabriel.
+        </p>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música criada pelo Gabriel</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/gabriel.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/gabriel.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Plot MIDI - Música criada pelo Gabriel</figcaption>
+            </figure>
+        </div>
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada nas escadas da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/gabriel_stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ginásio da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/gabriel_sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no auditório da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/gabriel_hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Música criada pelo Pietro</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            A seguir é apresentada a música criada pelo integrante Pietro.
+        </p>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música criada pelo Pietro</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/pietro.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 12pt;">
+            <figure style="text-align: center;">
+                <img src="./resources/pietro.png" style="text-align: center;" alt="" height="300px">
+                <figcaption>Plot MIDI - Música criada pelo Pietro</figcaption>
+            </figure>
+        </div>
+        <br>
+        <br>
+
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada nas escadas da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/pietro_stairs.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no ginásio da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/pietro_sports.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+
+        
+        <div style="display: flex; justify-content:space-around;">
+            <div style="text-align: center; font-size: 12pt;">
+                <p style="text-align: center;font-weight: bold;">Música tocada no auditório da Universidade of York</p>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="./resources/pietro_hall.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Item E</button>
+    <div class="content">
+        <p style="margin-top: 20px;margin-bottom: 20px;">
+            Fazer item E.
+        </p>
+        <br>
+        
+        <br>
+
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <button type="button" class="collapsible">Conclusões</button>
+    <div class="content">
+        <br>
+        <div style="text-align: right;">
+            Áudio-descrição desta seção.<br>
+            <audio controls>
+                <source src="./resources/sec4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
